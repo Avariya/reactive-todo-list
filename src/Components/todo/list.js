@@ -10,8 +10,8 @@ class TodoList extends Component
 
     render() {
         let todoList = [];
-        this.props.list.forEach(function (todoItem) {
-            todoList.push(<TodoItem text={todoItem.name} checked={todoItem.state}/>)
+        this.props.list.forEach(function (todoItem, index) {
+            todoList.push(<TodoItem key={index} text={todoItem.name} checked={todoItem.state}/>)
         });
         return todoList;
     }
@@ -19,6 +19,10 @@ class TodoList extends Component
 
 TodoList.propTypes = {
     list: PropTypes.array
+};
+
+TodoList.defaultProps = {
+    list: []
 };
 
 export default TodoList;

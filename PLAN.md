@@ -1,11 +1,18 @@
-1. ~~Clean useless files~~
-2. ~~Todo item~~
+
+ ~~Clean useless files~~
+
+ ~~Todo item~~
 a) ~~checkbox~~
 b) ~~text~~
-3. ~~Input field~~
+
+ ~~Input field~~
 a) ~~text~~
 b) ~~add button~~
-4. Add item to todo list
-5. Change state
+
+ Use Redux properly
+
+ Add item to todo list
+
+ Change state
 a) active todo -> checked - grey crossed, bottom
 b) inactive -> unchecked - add to main, regular

@@ -23,4 +23,8 @@ TodoItem.propTypes = {
     text: PropTypes.string.isRequired
 };
 
+TodoItem.defaultProps = {
+    checked: false
+};
+
 export default TodoItem;
