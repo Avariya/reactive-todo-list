@@ -16,3 +16,6 @@ b) ~~add button~~
  Change state
 a) active todo -> checked - grey crossed, bottom
 b) inactive -> unchecked - add to main, regular
+
+BONUS:
+change favicon
