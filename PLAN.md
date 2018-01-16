@@ -5,6 +5,7 @@ b) ~~text~~
 3. ~~Input field~~
 a) ~~text~~
 b) ~~add button~~
-4. Change state
+4. Add item to todo list
+5. Change state
 a) active todo -> checked - grey crossed, bottom
 b) inactive -> unchecked - add to main, regular
