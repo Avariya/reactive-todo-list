@@ -17,5 +17,12 @@ b) ~~add button~~
 a) active todo -> checked - grey crossed, bottom
 b) inactive -> unchecked - add to main, regular
 
+PRO:
+----
+* Tests
+* Localization
+* Webpack "internals"
+
 BONUS:
-change favicon
+------
+* Change favicon
