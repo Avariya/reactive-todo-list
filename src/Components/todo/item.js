@@ -20,7 +20,7 @@ class TodoItem extends Component {
 
 TodoItem.propTypes = {
     checked: PropTypes.bool,
-    text: PropTypes.string
+    text: PropTypes.string.isRequired
 };
 
 export default TodoItem;
