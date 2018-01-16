@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <TodoItem />
+          <TodoItem text="test" checked={false} />
       </div>
     );
   }

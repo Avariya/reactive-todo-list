@@ -1,14 +1,26 @@
 import React, {Component} from 'react';
-import Toggle from 'react-toggle';
+import PropTypes from 'prop-types';
 
 class TodoItem extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <div>
-                <Toggle aria-label="some label" value="test"/>
+                <label>
+                    <input type="checkbox" checked={this.props.checked} />
+                    {this.props.text}
+                </label>
             </div>
         );
     }
 }
+
+TodoItem.propTypes = {
+    checked: PropTypes.bool,
+    text: PropTypes.string
+};
 
 export default TodoItem;
