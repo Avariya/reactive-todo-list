@@ -26,18 +26,14 @@ class AddItem extends Component
 
     render() {
         return (<label>
-            <input type="text" onChange={this._textModified} value={this.props.defaultText} />
+            <input type="text" onChange={this._textModified} value={this.props.inputText} />
             <button onClick={this._addItem}>Add</button>
         </label>);
     }
 }
 
 AddItem.propTypes = {
-    defaultText: PropTypes.string
-};
-
-AddItem.defaultProps = {
-    defaultText: ''
+    inputText: PropTypes.string
 };
 
 export default AddItem;
