@@ -10,8 +10,8 @@ class TodoList extends Component
 
     render() {
         let todoList = [];
-        this.props.list.forEach(function (todoItem, index) {
-            todoList.push(<TodoItem key={index} text={todoItem.name} checked={todoItem.state}/>)
+        this.props.list.forEach(function (todoItem) {
+            todoList.push(<TodoItem key={Math.random().toString()} text={todoItem.name} state={todoItem.state}/>)
         });
         return todoList;
     }

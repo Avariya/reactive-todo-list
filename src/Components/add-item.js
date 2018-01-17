@@ -7,33 +7,39 @@ class AddItem extends Component
         super(props);
 
         this.state = {
-            text: ''
+            text: props.inputText
         };
 
         this._textModified = this._textModified.bind(this);
         this._addItem = this._addItem.bind(this);
     }
 
-    _addItem(event) {
+    _addItem = (event) => {
         event.preventDefault();
-        //todo input text is 'this.state.text' we need to store it somewhere
-    }
+        console.log(this.state.text);
+    };
 
-    _textModified(event) {
-        event.preventDefault();
+    _textModified = (event) => {
         this.setState({text: event.target.value});
-    }
+        event.preventDefault();
+    };
 
     render() {
-        return (<label>
-            <input type="text" onChange={this._textModified} value={this.props.inputText} />
-            <button onClick={this._addItem}>Add</button>
-        </label>);
+        return (
+            <form onSubmit={this._addItem}>
+                <input type="text" onChange={this._textModified} value={this.state.text} />
+                <input type="submit" value="Add" />
+            </form>
+        );
     }
 }
 
 AddItem.propTypes = {
     inputText: PropTypes.string
+};
+
+AddItem.defaultProps = {
+    inputText: ''
 };
 
 export default AddItem;

@@ -4,13 +4,24 @@ import PropTypes from 'prop-types';
 class TodoItem extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            checked: props.state
+        };
+
+        this._changeState.bind(this);
     }
+
+    _changeState = (event) => {
+        this.setState({
+            checked: event.target.checked
+        });
+    };
 
     render() {
         return (
             <div>
                 <label>
-                    <input type="checkbox" checked={this.props.checked} />
+                        <input type="checkbox" checked={this.state.checked} onChange={this._changeState} />
                     {this.props.text}
                 </label>
             </div>
@@ -19,12 +30,12 @@ class TodoItem extends Component {
 }
 
 TodoItem.propTypes = {
-    checked: PropTypes.bool,
+    state: PropTypes.bool,
     text: PropTypes.string.isRequired
 };
 
 TodoItem.defaultProps = {
-    checked: false
+    state: false
 };
 
 export default TodoItem;
