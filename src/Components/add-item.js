@@ -14,15 +14,15 @@ class AddItem extends Component
         this._addItem = this._addItem.bind(this);
     }
 
-    _addItem(event) {
+    _addItem = (event) => {
         event.preventDefault();
         console.log(this.state.text);
-    }
+    };
 
-    _textModified(event) {
+    _textModified = (event) => {
         this.setState({text: event.target.value});
         event.preventDefault();
-    }
+    };
 
     render() {
         return (
