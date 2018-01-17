@@ -30,7 +30,7 @@ class TodoItem extends Component {
 }
 
 TodoItem.propTypes = {
-    checked: PropTypes.bool,
+    state: PropTypes.bool,
     text: PropTypes.string.isRequired
 };
 
