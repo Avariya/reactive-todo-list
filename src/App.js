@@ -6,7 +6,10 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <TodoList list={[{state: false, name: "test"}]} />
+                <TodoList list={[
+                    {state: false, name: "test"},
+                    {state: true, name: "test32"},
+                ]} />
                 <AddItem />
             </div>
         );
